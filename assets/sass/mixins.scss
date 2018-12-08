@@ -1,0 +1,103 @@
+@import "variables.scss";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//then do @include *mixin name*
+// eg. @include border-radius(3px);
+
+//Font
+
+@mixin primary-font {
+  font-family: $primary-font;
+  color: $primary-font-color;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+@mixin secondary-font {
+  font-family: $secondary-font;
+  color: $secondary-font-color;
+  font-size: 1.3em;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function em-calc($px) {
+  $em-px: strip-unit(($px / $em));
+  $em-size: $em-px * 1em;
+  @return ($em-size);
+}
+
+//Display
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+
+//@include mobile()
+
+//Random
+
+@mixin center {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin rotate($rotate-value) {
+  -moz-transform: rotate($rotate-value);
+  -webkit-transform: rotate($rotate-value);
+  transform: rotate($rotate-value);
+}
+
+@mixin grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@mixin brightness($brightness-value) {
+  -webkit-filter: brightness($brightness-value);
+  filter: brightness($brightness-value);
+}
+
+@mixin box-shadow {
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}
+
+@mixin parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin link-color($color) {
+  a:link {
+    color: $color;
+  }
+  a:visited {
+    color: $color;
+  }
+  a:active {
+    color: $color;
+  }
+}

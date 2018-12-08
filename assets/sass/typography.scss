@@ -1,0 +1,17 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+h1 {
+  @include primary-font;
+}
+
+h2 {
+  @include secondary-font;
+  //margin-top: -1em;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: $secondary-color;
+  margin: 0.3em 0;
+}

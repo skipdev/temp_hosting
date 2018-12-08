@@ -1,0 +1,41 @@
+{
+  "name": "Honeypot",
+  "version": "1.0.0",
+  "description": "Yo",
+  "main": "index.html",
+  "author": {
+    "name": "Steph B",
+    "url": "http://honeypot.co.uk"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-footer": "^2.0.1",
+    "gulp-header": "^2.0.5",
+    "gulp-jshint": "^2.1.0",
+    "gulp-livereload": "^4.0.0",
+    "gulp-markdown": "^3.0.0",
+    "gulp-optimize-js": "^1.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "jshint": "^2.9.6",
+    "jshint-stylish": "^2.2.1",
+    "lazypipe": "^1.0.1",
+    "node-fs": "^0.1.7"
+  },
+  "dependencies": {
+    "eventmachine": "^2.2.1",
+    "handlebars": "^4.0.12",
+    "mapbox-gl": "^0.52.0-beta.1",
+    "npm-upgrade": "^1.4.1",
+    "prettier": "^1.15.2",
+    "progressbar.js": "^1.0.1"
+  }
+}
